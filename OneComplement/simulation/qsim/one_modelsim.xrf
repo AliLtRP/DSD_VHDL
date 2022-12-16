@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/altera/13.1/OneComplement/one.vhd
+source_file = 1, C:/altera/13.1/OneComplement/Waveform.vwf
+source_file = 1, C:/altera/13.1/OneComplement/db/one.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = one
+instance = comp, \b3~output , b3~output, one, 1
+instance = comp, \b2~output , b2~output, one, 1
+instance = comp, \b1~output , b1~output, one, 1
+instance = comp, \b0~output , b0~output, one, 1
+instance = comp, \a3~input , a3~input, one, 1
+instance = comp, \a2~input , a2~input, one, 1
+instance = comp, \a1~input , a1~input, one, 1
+instance = comp, \a0~input , a0~input, one, 1

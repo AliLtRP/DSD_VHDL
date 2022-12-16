@@ -1,0 +1,21 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+
+entity four is
+	port(a0,a1,a2,a3,b0,b1,b2,b3,cin : in std_logic; s0,s1,s2,s3,c);
+end four;
+
+architecture data of four is 
+
+component full is 
+	port(a,b,c0 : in std_logic; s,c : out std_logic);
+end component;
+
+signal y0,y1,y2,y3: std_logic;
+
+begin 
+	x0: full port map (a0,b0,cin, s0, y0);
+	x1: full port map (a1,b1,y0, s1, y1);
+	x2: full port map (a2,b2,y1, s2, y2);
+	x3: full port map (a3,b3,y2, s3, c);
+end data;

@@ -1,0 +1,24 @@
+# do and_3.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module and_3
+# 
+# Top level modules:
+# 	and_3
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module and_3_vlg_sample_tst
+# -- Compiling module and_3_vlg_check_tst
+# -- Compiling module and_3_vlg_vec_tst
+# 
+# Top level modules:
+# 	and_3_vlg_vec_tst
+# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.and_3_vlg_vec_tst 
+# Loading work.and_3_vlg_vec_tst
+# Loading work.and_3
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
+# Loading work.and_3_vlg_sample_tst
+# Loading work.and_3_vlg_check_tst
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(148)
+#    Time: 1 us  Iteration: 0  Instance: /and_3_vlg_vec_tst/tb_out

@@ -1,0 +1,336 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/16/2022 12:44:48"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    ab
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module ab_vlg_sample_tst(
+	a,
+	b,
+	cin,
+	sampler_tx
+);
+input [3:0] a;
+input [3:0] b;
+input  cin;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(a or b or cin)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module ab_vlg_check_tst (
+	c,
+	cout,
+	sampler_rx
+);
+input [3:0] c;
+input  cout;
+input sampler_rx;
+
+reg [3:0] c_expected;
+reg  cout_expected;
+
+reg [3:0] c_prev;
+reg  cout_prev;
+
+reg [3:0] c_expected_prev;
+
+reg [3:0] last_c_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:2] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 2'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	c_prev = c;
+	cout_prev = cout;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	c_expected_prev = c_expected;
+end
+
+
+// expected c[ 3 ]
+initial
+begin
+	c_expected[3] = 1'bX;
+end 
+// expected c[ 2 ]
+initial
+begin
+	c_expected[2] = 1'bX;
+end 
+// expected c[ 1 ]
+initial
+begin
+	c_expected[1] = 1'bX;
+end 
+// expected c[ 0 ]
+initial
+begin
+	c_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(c_expected or c or cout_expected or cout)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected c = %b | expected cout = %b | ",c_expected_prev,cout_expected_prev);
+	$display("| real c = %b | real cout = %b | ",c_prev,cout_prev);
+`endif
+	if (
+		( c_expected_prev[0] !== 1'bx ) && ( c_prev[0] !== c_expected_prev[0] )
+		&& ((c_expected_prev[0] !== last_c_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port c[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", c_expected_prev);
+		$display ("     Real value = %b", c_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_c_exp[0] = c_expected_prev[0];
+	end
+	if (
+		( c_expected_prev[1] !== 1'bx ) && ( c_prev[1] !== c_expected_prev[1] )
+		&& ((c_expected_prev[1] !== last_c_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port c[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", c_expected_prev);
+		$display ("     Real value = %b", c_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_c_exp[1] = c_expected_prev[1];
+	end
+	if (
+		( c_expected_prev[2] !== 1'bx ) && ( c_prev[2] !== c_expected_prev[2] )
+		&& ((c_expected_prev[2] !== last_c_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port c[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", c_expected_prev);
+		$display ("     Real value = %b", c_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_c_exp[2] = c_expected_prev[2];
+	end
+	if (
+		( c_expected_prev[3] !== 1'bx ) && ( c_prev[3] !== c_expected_prev[3] )
+		&& ((c_expected_prev[3] !== last_c_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port c[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", c_expected_prev);
+		$display ("     Real value = %b", c_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_c_exp[3] = c_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module ab_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [3:0] a;
+reg [3:0] b;
+reg cin;
+// wires                                               
+wire [3:0] c;
+wire cout;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+ab i1 (
+// port map - connection between master ports and signals/registers   
+	.a(a),
+	.b(b),
+	.c(c),
+	.cin(cin),
+	.cout(cout)
+);
+// a[ 3 ]
+initial
+begin
+	a[3] = 1'b1;
+	a[3] = #160000 1'b0;
+	a[3] = #240000 1'b1;
+	a[3] = #80000 1'b0;
+	a[3] = #240000 1'b1;
+	a[3] = #160000 1'b0;
+end 
+// a[ 2 ]
+initial
+begin
+	a[2] = 1'b0;
+	a[2] = #240000 1'b1;
+	a[2] = #80000 1'b0;
+	a[2] = #80000 1'b1;
+	a[2] = #80000 1'b0;
+	a[2] = #80000 1'b1;
+	a[2] = #240000 1'b0;
+	a[2] = #80000 1'b1;
+end 
+// a[ 1 ]
+initial
+begin
+	a[1] = 1'b1;
+	a[1] = #80000 1'b0;
+	a[1] = #480000 1'b1;
+	a[1] = #320000 1'b0;
+end 
+// a[ 0 ]
+initial
+begin
+	a[0] = 1'b1;
+	a[0] = #80000 1'b0;
+	a[0] = #240000 1'b1;
+	a[0] = #80000 1'b0;
+	a[0] = #160000 1'b1;
+	a[0] = #80000 1'b0;
+	a[0] = #80000 1'b1;
+	a[0] = #160000 1'b0;
+end 
+// b[ 3 ]
+initial
+begin
+	b[3] = 1'b1;
+	b[3] = #80000 1'b0;
+	b[3] = #80000 1'b1;
+	b[3] = #80000 1'b0;
+	b[3] = #560000 1'b1;
+	b[3] = #80000 1'b0;
+	b[3] = #80000 1'b1;
+end 
+// b[ 2 ]
+initial
+begin
+	b[2] = 1'b0;
+	b[2] = #80000 1'b1;
+	b[2] = #320000 1'b0;
+	b[2] = #80000 1'b1;
+	b[2] = #80000 1'b0;
+	b[2] = #80000 1'b1;
+	b[2] = #160000 1'b0;
+	b[2] = #80000 1'b1;
+end 
+// b[ 1 ]
+initial
+begin
+	b[1] = 1'b0;
+	b[1] = #80000 1'b1;
+	b[1] = #80000 1'b0;
+	b[1] = #160000 1'b1;
+	b[1] = #160000 1'b0;
+	b[1] = #480000 1'b1;
+end 
+// b[ 0 ]
+initial
+begin
+	b[0] = 1'b1;
+	b[0] = #80000 1'b0;
+	b[0] = #80000 1'b1;
+	b[0] = #240000 1'b0;
+	b[0] = #80000 1'b1;
+	b[0] = #80000 1'b0;
+	b[0] = #240000 1'b1;
+	b[0] = #160000 1'b0;
+end 
+
+ab_vlg_sample_tst tb_sample (
+	.a(a),
+	.b(b),
+	.cin(cin),
+	.sampler_tx(sampler)
+);
+
+ab_vlg_check_tst tb_out(
+	.c(c),
+	.cout(cout),
+	.sampler_rx(sampler)
+);
+endmodule
+

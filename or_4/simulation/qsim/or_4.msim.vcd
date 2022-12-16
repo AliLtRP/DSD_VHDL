@@ -1,0 +1,143 @@
+$comment
+	File created using the following command:
+		vcd file or_4.msim.vcd -direction
+$end
+$date
+	Fri Dec 09 19:32:52 2022
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module or_4_vlg_vec_tst $end
+$var reg 4 ! x [3:0] $end
+$var wire 1 " z $end
+$var wire 1 # sampler $end
+$scope module i1 $end
+$var wire 1 $ gnd $end
+$var wire 1 % vcc $end
+$var wire 1 & unknown $end
+$var tri1 1 ' devclrn $end
+$var tri1 1 ( devpor $end
+$var tri1 1 ) devoe $end
+$var wire 1 * z~output_o $end
+$var wire 1 + x[3]~input_o $end
+$var wire 1 , x[2]~input_o $end
+$var wire 1 - x[0]~input_o $end
+$var wire 1 . x[1]~input_o $end
+$var wire 1 / z~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b111 !
+1"
+x#
+0$
+1%
+x&
+1'
+1(
+1)
+1*
+0+
+1,
+1-
+1.
+1/
+$end
+#80000
+b1111 !
+b1011 !
+b1001 !
+b1000 !
+0-
+0.
+0,
+1+
+0#
+#160000
+b1100 !
+b1110 !
+b1111 !
+1-
+1.
+1,
+1#
+#240000
+b1011 !
+0,
+0#
+#320000
+b1111 !
+1,
+1#
+#400000
+b1101 !
+b1001 !
+0.
+0,
+0#
+#480000
+b1 !
+b0 !
+b10 !
+b110 !
+0-
+1.
+1,
+0+
+1#
+#560000
+b1110 !
+b1111 !
+b1101 !
+1-
+0.
+1+
+0#
+#640000
+b1001 !
+0,
+1#
+#720000
+b1 !
+b0 !
+0-
+0+
+0#
+0/
+0*
+0"
+#800000
+b10 !
+b110 !
+b111 !
+1-
+1.
+1,
+1#
+1/
+1*
+1"
+#880000
+b1111 !
+b1101 !
+0.
+1+
+0#
+#960000
+b1001 !
+b1000 !
+b0 !
+0-
+0,
+0+
+1#
+0/
+0*
+0"
+#1000000

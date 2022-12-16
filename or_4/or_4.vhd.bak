@@ -1,0 +1,12 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+
+entity or_4 is
+	port(x: in std_logic_vector (3 downto 0); z: out std_logic);
+end or_4;
+
+architecture data of or_4 is 
+
+begin 
+	z <= x(0) or x(1) or x(2) or x(3);
+end data;

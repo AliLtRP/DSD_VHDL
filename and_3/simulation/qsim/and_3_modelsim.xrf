@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/altera/13.1/and_3/and_3.vhd
+source_file = 1, C:/altera/13.1/and_3/Waveform.vwf
+source_file = 1, C:/altera/13.1/and_3/db/and_3.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = and_3
+instance = comp, \z~output , z~output, and_3, 1
+instance = comp, \x0~input , x0~input, and_3, 1
+instance = comp, \x2~input , x2~input, and_3, 1
+instance = comp, \x1~input , x1~input, and_3, 1
+instance = comp, \z~0 , z~0, and_3, 1

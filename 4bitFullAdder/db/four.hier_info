@@ -1,0 +1,145 @@
+|four
+a[0] => full:x0.a
+a[1] => full:x1.a
+a[2] => full:x2.a
+a[3] => full:x3.a
+b[0] => full:x0.b
+b[1] => full:x1.b
+b[2] => full:x2.b
+b[3] => full:x3.b
+cin => ~NO_FANOUT~
+s[0] <= full:x0.s
+s[1] <= full:x1.s
+s[2] <= full:x2.s
+s[3] <= full:x3.s
+c <= full:x3.c
+
+
+|four|full:x0
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|four|full:x0|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x0|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x0|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x1
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|four|full:x1|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x1|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x1|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x2
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|four|full:x2|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x2|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x2|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x3
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|four|full:x3|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x3|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|four|full:x3|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+

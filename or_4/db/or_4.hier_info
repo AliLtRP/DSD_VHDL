@@ -1,0 +1,8 @@
+|or_4
+x[0] => z.IN0
+x[1] => z.IN1
+x[2] => z.IN1
+x[3] => z.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+

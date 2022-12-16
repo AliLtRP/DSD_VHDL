@@ -1,0 +1,24 @@
+# do half.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module half
+# 
+# Top level modules:
+# 	half
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module half_vlg_sample_tst
+# -- Compiling module half_vlg_check_tst
+# -- Compiling module half_vlg_vec_tst
+# 
+# Top level modules:
+# 	half_vlg_vec_tst
+# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.half_vlg_vec_tst 
+# Loading work.half_vlg_vec_tst
+# Loading work.half
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
+# Loading work.half_vlg_sample_tst
+# Loading work.half_vlg_check_tst
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(177)
+#    Time: 1 us  Iteration: 0  Instance: /half_vlg_vec_tst/tb_out

@@ -1,0 +1,15 @@
+# do mux_2.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_2
+# 
+# Top level modules:
+# 	mux_2
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_2_vlg_sample_tst
+# -- Compiling module mux_2_vlg_check_tst
+# -- Compiling module mux_2_vlg_vec_tst
+# ** Error: Waveform2.vwf.vt(174): 'i1' already declared in this scope.
+# ** Error: c:/altera/13.1/modelsim_ase/win32aloem/vlog failed.
+# Executing ONERROR command at macro ./mux_2.do line 4

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.1\not_gate\simulation\qsim
+vnot_gate
+Z1 IhAiHRQJDmRDZDGcBYRPJM2
+Z2 VgfAzO`YlkTco@__FZDfKL3
+Z3 dC:\altera\13.1\not_gate\simulation\qsim
+Z4 w1670642509
+Z5 8not_gate.vo
+Z6 Fnot_gate.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 PJI2:^:Rd=CIKk^4<b4?S0
+!s85 0
+Z10 !s108 1670642518.008000
+Z11 !s107 not_gate.vo|
+Z12 !s90 -work|work|not_gate.vo|
+!s101 -O0
+vnot_gate_vlg_check_tst
+!i10b 1
+!s100 lfX:MWLZBQImC>^?ASj6e1
+I?EZB<dQNcVE8iO56^WLNc2
+VR0:LN@Ign9U?FBTUIKD1b2
+R3
+Z13 w1670642506
+Z14 8Waveform.vwf.vt
+Z15 FWaveform.vwf.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z16 !s108 1670642518.663000
+Z17 !s107 Waveform.vwf.vt|
+Z18 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R8
+vnot_gate_vlg_sample_tst
+!i10b 1
+!s100 MXYAlaaK<n^i:OIeYAJ3G3
+I?6IOM424MZ3DzaE6m3czA3
+V;jg`HPl3c2f801F:9o:Yl1
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vnot_gate_vlg_vec_tst
+!i10b 1
+!s100 Mj9_Y7m:KoMlCcSaPW4Y@1
+IXzhiRFc2TVe4`O:V68W5?3
+V=4OD8BGh:]<9JmjQa8VZE2
+R3
+R13
+R14
+R15
+L0 152
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

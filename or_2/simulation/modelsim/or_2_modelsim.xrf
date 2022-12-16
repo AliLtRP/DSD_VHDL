@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, C:/altera/13.1/or_2/or_2.vhd
+source_file = 1, C:/altera/13.1/or_2/db/or_2.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = or_2
+instance = comp, \c~output\, c~output, or_2, 1
+instance = comp, \b~input\, b~input, or_2, 1
+instance = comp, \a~input\, a~input, or_2, 1
+instance = comp, \c~0\, c~0, or_2, 1

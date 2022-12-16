@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/altera/13.1/mux_2/mux_2.vhd
+source_file = 1, C:/altera/13.1/mux_2/Waveform2.vwf
+source_file = 1, C:/altera/13.1/mux_2/db/mux_2.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = mux_2
+instance = comp, \z~output , z~output, mux_2, 1
+instance = comp, \i1~input , i1~input, mux_2, 1
+instance = comp, \s~input , s~input, mux_2, 1
+instance = comp, \i0~input , i0~input, mux_2, 1
+instance = comp, \z~0 , z~0, mux_2, 1

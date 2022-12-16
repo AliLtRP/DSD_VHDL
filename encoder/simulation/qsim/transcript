@@ -1,0 +1,24 @@
+# do encoder_4.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module encoder_4
+# 
+# Top level modules:
+# 	encoder_4
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module encoder_4_vlg_sample_tst
+# -- Compiling module encoder_4_vlg_check_tst
+# -- Compiling module encoder_4_vlg_vec_tst
+# 
+# Top level modules:
+# 	encoder_4_vlg_vec_tst
+# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.encoder_4_vlg_vec_tst 
+# Loading work.encoder_4_vlg_vec_tst
+# Loading work.encoder_4
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
+# Loading work.encoder_4_vlg_sample_tst
+# Loading work.encoder_4_vlg_check_tst
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(165)
+#    Time: 1 us  Iteration: 0  Instance: /encoder_4_vlg_vec_tst/tb_out

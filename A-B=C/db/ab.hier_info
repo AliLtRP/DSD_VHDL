@@ -1,0 +1,333 @@
+|ab
+a[0] => four:x1.a0
+a[1] => four:x1.a1
+a[2] => four:x1.a2
+a[3] => four:x1.a3
+b[0] => two:x0.a0
+b[1] => two:x0.a1
+b[2] => two:x0.a2
+b[3] => two:x0.a3
+cin => ~NO_FANOUT~
+c[0] <= four:x1.s0
+c[1] <= four:x1.s1
+c[2] <= four:x1.s2
+c[3] <= four:x1.s3
+cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0
+a0 => one:x0.a3
+a1 => one:x0.a2
+a2 => one:x0.a1
+a3 => one:x0.a0
+b0 => ~NO_FANOUT~
+b1 => ~NO_FANOUT~
+b2 => ~NO_FANOUT~
+b3 => ~NO_FANOUT~
+c0 <= four:x1.s0
+c1 <= four:x1.s1
+c2 <= four:x1.s2
+c3 <= four:x1.s3
+
+
+|ab|two:x0|one:x0
+a3 => b3.DATAIN
+a2 => b2.DATAIN
+a1 => b1.DATAIN
+a0 => b0.DATAIN
+b3 <= a3.DB_MAX_OUTPUT_PORT_TYPE
+b2 <= a2.DB_MAX_OUTPUT_PORT_TYPE
+b1 <= a1.DB_MAX_OUTPUT_PORT_TYPE
+b0 <= a0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1
+a0 => full:x0.a
+a1 => full:x1.a
+a2 => full:x2.a
+a3 => full:x3.a
+b0 => full:x0.b
+b1 => full:x1.b
+b2 => full:x2.b
+b3 => full:x3.b
+cin => ~NO_FANOUT~
+s0 <= full:x0.s
+s1 <= full:x1.s
+s2 <= full:x2.s
+s3 <= full:x3.s
+c <= full:x3.c
+
+
+|ab|two:x0|four:x1|full:x0
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|ab|two:x0|four:x1|full:x0|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x0|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x0|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x1
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|ab|two:x0|four:x1|full:x1|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x1|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x1|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x2
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|ab|two:x0|four:x1|full:x2|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x2|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x2|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x3
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|ab|two:x0|four:x1|full:x3|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x3|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|two:x0|four:x1|full:x3|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1
+a0 => full:x0.a
+a1 => full:x1.a
+a2 => full:x2.a
+a3 => full:x3.a
+b0 => full:x0.b
+b1 => full:x1.b
+b2 => full:x2.b
+b3 => full:x3.b
+cin => ~NO_FANOUT~
+s0 <= full:x0.s
+s1 <= full:x1.s
+s2 <= full:x2.s
+s3 <= full:x3.s
+c <= full:x3.c
+
+
+|ab|four:x1|full:x0
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|ab|four:x1|full:x0|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x0|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x0|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x1
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|ab|four:x1|full:x1|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x1|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x1|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x2
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|ab|four:x1|full:x2|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x2|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x2|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x3
+a => half:x0.a
+b => half:x0.b
+c0 => half:x1.b
+s <= half:x1.s
+c <= or_2:x2.c
+
+
+|ab|four:x1|full:x3|half:x0
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x3|half:x1
+a => s.IN0
+a => c.IN0
+b => s.IN1
+b => c.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ab|four:x1|full:x3|or_2:x2
+a => c.IN0
+b => c.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+
+
